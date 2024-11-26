@@ -1,0 +1,17 @@
+* {
+  font-family: Verdana, Tahoma, sans-serif;
+}
+.container-button {
+  display: flex;
+  margin-top: 100px;
+  justify-content: center;
+  gap: 20px;
+}
+
+.button {
+  font-size: 30px;
+  padding: 20px;
+  border-radius: 30px;
+  background-color: white;
+  border-width: 4px;
+}
