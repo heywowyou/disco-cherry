@@ -1,10 +1,6 @@
 let computerScore = 0;
 let humanScore = 0;
 
-const rock = document.querySelector("#rock");
-const paper = document.querySelector("#paper");
-const scissors = document.querySelector("#scissors");
-
 function getComputerChoice() {
   let number = Math.floor(Math.random() * 3) + 1;
   switch (number) {
@@ -44,18 +40,48 @@ function playRound(humanChoice, computerChoice) {
   return winner;
 }
 
+function win() {
+  if (humanScore >= 5) {
+    alert("You Win!");
+  } else if (computerScore >= 5) {
+    alert("Computer Win!");
+  }
+}
+
+const rock = document.querySelector("#rock");
+const paper = document.querySelector("#paper");
+const scissors = document.querySelector("#scissors");
+
+const resultContainer = document.querySelector(".container-result");
+const result = document.createElement("div");
+const scoreContainer = document.querySelector(".container-score");
+const scoreC = document.createElement("div");
+const scoreH = document.createElement("div");
+
 rock.addEventListener("click", function () {
-  console.log(playRound("Rock", getComputerChoice()));
-  console.log(computerScore);
-  console.log(humanScore);
+  result.textContent = playRound("Rock", getComputerChoice());
+  resultContainer.appendChild(result);
+  scoreC.textContent = computerScore;
+  scoreH.textContent = humanScore;
+  scoreContainer.appendChild(scoreC);
+  scoreContainer.appendChild(scoreH);
+  win();
 });
 paper.addEventListener("click", function () {
-  console.log(playRound("Paper", getComputerChoice()));
-  console.log(computerScore);
-  console.log(humanScore);
+  result.textContent = playRound("Paper", getComputerChoice());
+  resultContainer.appendChild(result);
+  scoreC.textContent = computerScore;
+  scoreH.textContent = humanScore;
+  scoreContainer.appendChild(scoreC);
+  scoreContainer.appendChild(scoreH);
+  win();
 });
 scissors.addEventListener("click", function () {
-  console.log(playRound("Scissors", getComputerChoice()));
-  console.log(computerScore);
-  console.log(humanScore);
+  result.textContent = playRound("Scissors", getComputerChoice());
+  resultContainer.appendChild(result);
+  scoreC.textContent = computerScore;
+  scoreH.textContent = humanScore;
+  scoreContainer.appendChild(scoreC);
+  scoreContainer.appendChild(scoreH);
+  win();
 });
