@@ -40,11 +40,11 @@ function playRound(humanChoice, computerChoice) {
   return winner;
 }
 
-function winAlert() {
-  if ((humanScore = 5)) {
-    alert("You win!");
-  } else if ((computerScore = 5)) {
+function win() {
+  if (computerScore === 5) {
     alert("You lose..");
+  } else if (humanScore === 5) {
+    alert("You win!");
   }
 }
 
@@ -66,7 +66,7 @@ rock.addEventListener("click", function () {
     scoreC.textContent = "CPU : " + computerScore;
     scoreContainer.appendChild(scoreH);
     scoreContainer.appendChild(scoreC);
-  } else winAlert();
+  } else win();
 });
 paper.addEventListener("click", function () {
   if (humanScore < 5 && computerScore < 5) {
@@ -76,7 +76,7 @@ paper.addEventListener("click", function () {
     scoreC.textContent = "CPU : " + computerScore;
     scoreContainer.appendChild(scoreH);
     scoreContainer.appendChild(scoreC);
-  } else winAlert();
+  } else win();
 });
 scissors.addEventListener("click", function () {
   if (humanScore < 5 && computerScore < 5) {
@@ -86,5 +86,5 @@ scissors.addEventListener("click", function () {
     scoreC.textContent = "CPU : " + computerScore;
     scoreContainer.appendChild(scoreH);
     scoreContainer.appendChild(scoreC);
-  } else winAlert();
+  } else win();
 });
