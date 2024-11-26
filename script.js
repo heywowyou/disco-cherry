@@ -67,6 +67,6 @@ function playGame() {
   console.log(humanScore);
 }
 
-do {
+/* do {
   playGame();
-} while (humanScore < 5 && computerScore < 5);
+} while (humanScore < 5 && computerScore < 5); */
