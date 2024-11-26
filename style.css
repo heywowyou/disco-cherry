@@ -16,12 +16,20 @@
   background-color: #2f3e46;
   border-color: white;
   border-radius: 60px;
-  box-shadow: 20px 20px 60px #8b8b8b, -20px -20px 60px #ffffff;
+  box-shadow: 20px 20px 20px #bebebe, -20px -20px 20px #ffffff;
   padding: 30px;
 }
 
 .button-image {
   background-color: #2f3e46;
+}
+
+.dynamic-container {
+  color: #2f3e46;
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow: 10px 10px 60px #bebebe, -10px -10px 60px #ffffff;
+  padding: 30px;
 }
 
 .container-result {
@@ -32,7 +40,7 @@
 
 .container-score {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
   margin: 20px;
+  gap: 20px;
 }

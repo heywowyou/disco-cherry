@@ -55,8 +55,12 @@ const scissors = document.querySelector("#scissors");
 const resultContainer = document.querySelector(".container-result");
 const result = document.createElement("div");
 const scoreContainer = document.querySelector(".container-score");
-const scoreC = document.createElement("div");
 const scoreH = document.createElement("div");
+const scoreC = document.createElement("div");
+
+result.classList.add("dynamic-container");
+scoreC.classList.add("dynamic-container");
+scoreH.classList.add("dynamic-container");
 
 rock.addEventListener("click", function () {
   if (humanScore < 5 && computerScore < 5) {
