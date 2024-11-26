@@ -19,22 +19,22 @@ function getComputerChoice() {
 
 function playRound(humanChoice, computerChoice) {
   if (humanChoice === "Rock" && computerChoice === "Paper") {
-    winner = "You lose! Paper beats Rock";
+    winner = "You lose! Paper beats Rock.";
     computerScore++;
   } else if (humanChoice === "Rock" && computerChoice === "Scissors") {
-    winner = "You win! Rock beats Scissors";
+    winner = "You win! Rock beats Scissors.";
     humanScore++;
   } else if (humanChoice === "Paper" && computerChoice === "Scissors") {
-    winner = "You lose! Scissors beats Paper";
+    winner = "You lose! Scissors beats Paper.";
     computerScore++;
   } else if (humanChoice === "Paper" && computerChoice === "Rock") {
-    winner = "You win! Paper beats Rock";
+    winner = "You win! Paper beats Rock.";
     humanScore++;
   } else if (humanChoice === "Scissors" && computerChoice === "Rock") {
-    winner = "You lose! Rock beats Scissors";
+    winner = "You lose! Rock beats Scissors.";
     computerScore++;
   } else if (humanChoice === "Scissors" && computerChoice === "Paper") {
-    winner = "You win! Scissors beats Paper";
+    winner = "You win! Scissors beats Paper.";
     humanScore++;
   } else winner = "It's a draw!";
   return winner;
@@ -62,8 +62,8 @@ rock.addEventListener("click", function () {
   if (humanScore < 5 && computerScore < 5) {
     result.textContent = playRound("Rock", getComputerChoice());
     resultContainer.appendChild(result);
-    scoreC.textContent = computerScore;
-    scoreH.textContent = humanScore;
+    scoreH.textContent = "YOU : " + humanScore;
+    scoreC.textContent = "CPU : " + computerScore;
     scoreContainer.appendChild(scoreH);
     scoreContainer.appendChild(scoreC);
   } else winAlert();
@@ -72,8 +72,8 @@ paper.addEventListener("click", function () {
   if (humanScore < 5 && computerScore < 5) {
     result.textContent = playRound("Paper", getComputerChoice());
     resultContainer.appendChild(result);
-    scoreC.textContent = computerScore;
-    scoreH.textContent = humanScore;
+    scoreH.textContent = "YOU : " + humanScore;
+    scoreC.textContent = "CPU : " + computerScore;
     scoreContainer.appendChild(scoreH);
     scoreContainer.appendChild(scoreC);
   } else winAlert();
@@ -82,8 +82,8 @@ scissors.addEventListener("click", function () {
   if (humanScore < 5 && computerScore < 5) {
     result.textContent = playRound("Scissors", getComputerChoice());
     resultContainer.appendChild(result);
-    scoreC.textContent = computerScore;
-    scoreH.textContent = humanScore;
+    scoreH.textContent = "YOU : " + humanScore;
+    scoreC.textContent = "CPU : " + computerScore;
     scoreContainer.appendChild(scoreH);
     scoreContainer.appendChild(scoreC);
   } else winAlert();
